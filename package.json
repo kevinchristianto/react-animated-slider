@@ -1,6 +1,6 @@
 {
   "name": "react-animated-slider",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Animated slider component for react",
   "main": "build/index.js",
   "files": [
@@ -9,7 +9,7 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.pages.js --mode development",
     "test": "jest",
-    "build": "webpack-cli --mode production",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack-cli --mode production",
     "lint": "eslint src",
     "predeploy": "webpack --mode production --config webpack.config.pages.js",
     "deploy": "gh-pages -d pages",
@@ -42,7 +42,7 @@
   },
   "homepage": "https://github.com/erichbehrens/react-animated-slider#readme",
   "peerDependencies": {
-    "react": "^16.4.0",
+    "react": "^16.4.0 || ^17",
     "react-dom": "^16.4.0"
   },
   "devDependencies": {
@@ -58,6 +58,7 @@
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^10.1.0",
     "css-hot-loader": "^1.4.4",
     "css-loader": "^3.2.0",
     "eslint": "^6.7.1",
